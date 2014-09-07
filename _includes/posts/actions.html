@@ -1,0 +1,15 @@
+<ul class="actions clearfix">
+  {% if include.index == "true" %}
+    {% assign obj = post %}
+  {% else %}
+    {% assign obj = page %}
+  {% endif %}
+
+  <li class="action action-original"><a href="{{ obj.original }}" target="_blank">full article</a></li>
+  {% if obj.hnews %}
+    <li class="action action-hnews"><a href="{{ obj.hnews }}" target="_blank">Hacker News</a></li>
+  {% endif %}
+</ul>
+
+<div class="clearfix"></div>
+

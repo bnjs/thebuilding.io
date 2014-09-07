@@ -1,0 +1,21 @@
+<ul class="tags clearfix">
+  {% if include.index == "true" %}
+    {% assign obj = post %}
+  {% else %}
+    {% assign obj = page %}
+  {% endif %}
+
+  {% for tag in obj.tags %}
+    {% if page.tag == tag %}
+    {% else %}
+    <li class="tag tag-{{ tag }}">
+      <a href="/tag/{{ tag }}">{{ tag }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+
+  <li class="tag tag-date">
+    {{ obj.date | date: "%Y %b %-d" }}
+  </li>
+</ul>
+

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: The Building
 ---
 
-{% for post in site.posts %}
+{% for post in page.posts %}
   <div class="post" style="margin-bottom:0px">
     {% include posts/title.html index="true" %}
     {{ post.content }}
     {% include posts/actions.html index="true" %}
   </div>
-  ---
+  <hr>
 {% endfor %}
+
