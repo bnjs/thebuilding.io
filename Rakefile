@@ -3,6 +3,7 @@ require 'rake'
 require 'rdoc'
 require 'date'
 require 'yaml'
+require 'tmpdir'
 
 desc "Generate blog files"
 task :build do
@@ -11,12 +12,18 @@ end
 
 desc "Generate and publish blog to gh-pages"
 task :publish => [:build] do
-  system "git branch -D gh-pages"
-  system "git checkout -b gh-pages"
-  system "git filter-branch --subdirectory-filter _site/ -f "
-  system "git checkout source"
-  system "git push --all origin"
-  system "echo yolo"
+  Dir.mktmpdir do |tmp|
+    system "mv _site/* #{tmp}"
+    system "git checkout -B gh-pages"
+    system "rm -rf *"
+    system "mv #{tmp}/* ."
+    message = "Site updated at #{Time.now.utc}"
+    system "git add ."
+    system "git commit -am #{message.shellescape}"
+    system "git push origin gh-pages --force"
+    system "git checkout source"
+    system "echo yolo"
+  end
 end
 
 task :default => :publish
