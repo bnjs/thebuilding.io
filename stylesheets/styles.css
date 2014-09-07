@@ -265,14 +265,14 @@ ul.tags li.tag a {
   color: white;
 }
 
-ul.tags li.tag.tag-development a {
+a#tag-heading { color: #ccc; font-weight: bold; }
+a#tag-heading:hover { text-decoration: none; }
+
+/*ul.tags li.tag.tag-development a {
   background-color: #FC6621;
   color: white;
 }
-
-a#tag-heading { color: #ccc; font-weight: bold; }
-a#tag-heading:hover { text-decoration: none; }
-a#tag-heading.tag-heading-development { color: #FC6621; }
+a#tag-heading.tag-heading-development { color: #FC6621; }*/
 
 ul.tags li.tag a:hover {
 }
