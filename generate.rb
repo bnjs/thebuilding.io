@@ -47,7 +47,8 @@ class Article
   end
 
   def order_date
-    published_date || added_date
+    #published_date || added_date
+    added_date
   end
 
   def host
