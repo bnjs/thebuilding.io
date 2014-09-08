@@ -109,7 +109,7 @@ end
 
 if ARGV[0]=='post'
   article = Article.process_one `pbpaste`
-  File.open("_posts/#{a.filename}", 'w') do |f|
+  File.open("_posts/#{article.filename}", 'w') do |f|
     f.puts output_article(article)
   end
   exit
