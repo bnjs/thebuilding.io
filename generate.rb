@@ -102,10 +102,10 @@ def output_article a
   output
 end
 
-print "Processing csv..."
-articles = Article.process(File.read('articles.csv'))
-articles = articles.sort{|a,b| b.order_date.to_s <=> a.order_date.to_s }
-puts "done."
+#print "Processing csv..."
+#articles = Article.process(File.read('articles.csv'))
+#articles = articles.sort{|a,b| b.order_date.to_s <=> a.order_date.to_s }
+#puts "done."
 
 if ARGV[0]=='post'
   article = Article.process_one `pbpaste`
