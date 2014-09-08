@@ -5,6 +5,11 @@ require 'date'
 require 'yaml'
 require 'tmpdir'
 
+desc "Serve the site locally"
+task :serve do
+  system "bundle exec jekyll serve -w"
+end
+
 desc "Generate blog files"
 task :build do
   system "bundle exec jekyll build"
