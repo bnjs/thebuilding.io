@@ -90,8 +90,9 @@ def output_article a
   output += "tags: [#{a.tags.downcase}]\n" if a.tags
   output += "original: \"#{a.url}\"\n"
   output += "image: \"#{a.image_filename}\"\n" if a.image
-  output += "image: \"#{a.image_local_filename}\"\n" if a.image_local && image_local != ''
-  output += "vimeo: \"#{a.vimeo}\"\n" if a.vimeo && vimeo != ''
+  output += "image: \"#{a.image_local_filename}\"\n" if a.image_local && a.image_local != ''
+  output += "vimeo: \"#{a.vimeo}\"\n" if a.vimeo && a.vimeo != ''
+  output += "youtube: \"#{a.youtube}\"\n" if a.youtube && a.youtube != ''
   output += "hnews: \"#{a.hnews}\"\n" if a.hnews
   #output += "image: \"#{a.image}\"\n" if a.image
   output += "---\n"
