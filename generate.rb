@@ -7,7 +7,7 @@ require 'open-uri'
 
 class Article
 
-  attr_reader :opts, :uuid, :published_at, :tags, :title, :author, :essential, :summary, :url, :added_at, :image, :image_local, :youtube, :vimeo, :hnews
+  attr_reader :opts, :uuid, :published_at, :tags, :title, :author, :author_link, :essential, :summary, :url, :added_at, :image, :image_local, :youtube, :vimeo, :hnews
 
   def initialize opts={}
     @opts = opts
@@ -23,7 +23,7 @@ class Article
     end
 
     def process_one tsv
-      heads = %w(uuid published_at tags title author summary url added_at image image_local youtube vimeo hnews)
+      heads = %w(uuid published_at tags title author author_link summary url added_at image image_local youtube vimeo hnews)
       arr = [tsv.split("\t")]
       hash = arr.map{|row| h = Hash[heads.zip(row)]; h if h && h.any? }.compact[0]
       new hash
@@ -83,6 +83,10 @@ class Article
   end
 end
 
+def present? s
+  s && s != ''
+end
+
 def output_article a
   output = ""
   output += "---\n"
@@ -95,6 +99,8 @@ def output_article a
   output += "vimeo: \"#{a.vimeo}\"\n" if a.vimeo && a.vimeo != ''
   output += "youtube: \"#{a.youtube}\"\n" if a.youtube && a.youtube != ''
   output += "hnews: \"#{a.hnews}\"\n" if a.hnews
+  output += "author: \"#{a.author}\"\n" if present? a.author
+  output += "author_link: \"#{a.author_link}\"\n" if present? a.author_link
   #output += "image: \"#{a.image}\"\n" if a.image
   output += "---\n"
   output += "\n"

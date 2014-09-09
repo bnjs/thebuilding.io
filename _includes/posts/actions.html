@@ -5,6 +5,11 @@
     {% assign obj = page %}
   {% endif %}
 
+  {% if obj.author_link %}
+    <li class="action action-author">
+      <a href="{{ obj.author_link }}" target="_blank">by {{ obj.author }}</a>
+    </li>
+  {% endif %}
   <li class="action action-original"><a href="{{ obj.original }}" target="_blank">full article</a></li>
   {% if obj.hnews %}
     <li class="action action-hnews"><a href="{{ obj.hnews }}" target="_blank">Hacker News</a></li>
