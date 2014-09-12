@@ -11,7 +11,7 @@ title: The Building
     {{ post.content }}
     {% include posts/actions.html index="true" %}
   </div>
-  ---
+  <hr>
 {% endfor %}
 
 </div>
