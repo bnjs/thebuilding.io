@@ -316,3 +316,7 @@ ul.actions li.action.action-tweet a {
 ul.actions li.action.action-hnews a {
   color: #FC6621;
 }
+
+h2 a { font-weight: bold; }
+
+#posts .long-content { display: none; }

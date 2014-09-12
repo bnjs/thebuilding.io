@@ -3,6 +3,8 @@ layout: default
 title: The Building
 ---
 
+<div id="posts">
+
 {% for post in site.posts %}
   <div class="post" style="margin-bottom:0px">
     {% include posts/title.html index="true" %}
@@ -11,3 +13,5 @@ title: The Building
   </div>
   ---
 {% endfor %}
+
+</div>
