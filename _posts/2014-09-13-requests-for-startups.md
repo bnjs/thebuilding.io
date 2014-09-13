@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Requests for Startups"
+title: "Y Combinator's Requests for Startups"
 tags: [business, ideas, ycombinator]
 original: "http://www.ycombinator.com/rfs/"
 image: "images/2014-09-13-requests-for-startups/3.jpg"
