@@ -5,6 +5,10 @@
     {% assign obj = page %}
   {% endif %}
 
+  <li class="tag tag-date">
+    {{ obj.date | date: "%Y %b %-d" }}
+  </li>
+
   {% for tag in obj.tags %}
     {% if page.tag == tag %}
     {% else %}
@@ -13,9 +17,5 @@
     </li>
     {% endif %}
   {% endfor %}
-
-  <li class="tag tag-date">
-    {{ obj.date | date: "%Y %b %-d" }}
-  </li>
 </ul>
 

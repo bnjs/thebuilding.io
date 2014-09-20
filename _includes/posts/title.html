@@ -4,10 +4,10 @@
   {% assign obj = page %}
 {% endif %}
 
-<h1><a href="{{ obj.url }}" style="font-weight:bold">{{ obj.title }}</a></h1>
+<h1><a href="{{ obj.original }}" target="_blank">{{ obj.title }}</a></h1>
 
-{% include posts/tags.html index=include.index %}
 
+{% if obj.status == "feature" || include.index != "true" %}
 {% if obj.vimeo %}
 <iframe src="//player.vimeo.com/video/{{ obj.vimeo }}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 {% elsif obj.youtube %}
@@ -17,3 +17,7 @@
 {% endif %}
 <br/>
 <br/>
+{% endif %}
+
+
+{% include posts/tags.html index=include.index %}
