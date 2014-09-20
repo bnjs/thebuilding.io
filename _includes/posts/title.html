@@ -13,7 +13,7 @@
 {% elsif obj.youtube %}
 <iframe width="560" height="315" src="//www.youtube.com/embed/{{ obj.youtube }}" frameborder="0" allowfullscreen></iframe>
 {% elsif obj.image %}
-<a href="{{ obj.url }}"><img src="http://s3.amazonaws.com/thebuilding.io/{{ obj.image }}" /></a>
+<a href="{{ obj.original }}"><img src="http://s3.amazonaws.com/thebuilding.io/{{ obj.image }}" /></a>
 {% endif %}
 <br/>
 <br/>
