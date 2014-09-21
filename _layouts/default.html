@@ -7,7 +7,11 @@
     <div class="wrapper">
       <header>
         <h1>
-          <a href="/" style="font-weight:bold;"><i class="fa fa-building-o"></i></a>
+          <a href="/"><i class="fa fa-building-o"></i></a>
+          <div class="social-links">
+            <a href="https://www.facebook.com/thebuildingio" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://twitter.com/thebuildingio" target="_blank"><i class="fa fa-facebook"></i></a>
+          </div>
           {% if page.tag %}
             <a href="/tag/{{page.tag}}" id="tag-heading" class="tag-heading-{{page.tag}}">{{ page.tag }}</a>
           {% endif %}

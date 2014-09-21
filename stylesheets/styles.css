@@ -256,9 +256,16 @@ header {
   position: relative;
 }
 
-header h1 {
-  text-align: center;
+header h1 { text-align: center; }
+
+header h1 .social-links {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
+header h1 .social-links a { color: #eee; }
+header h1 .social-links a:hover { color: #ccc; }
+header h1 .social-links a i { width: 26px; }
 
 section {
   float: none;
@@ -273,12 +280,8 @@ section {
   font-size: 40px;
 }
 
-.post.post-feature blockquote {
-  font-size: 18px;
-}
-.post.post-subfeature blockquote {
-  font-size: 16px;
-}
+.post.post-feature blockquote { font-size: 18px; }
+.post.post-subfeature blockquote { font-size: 16px; }
 
 .post.post-feature ul.tags li.tag.tag-date,
 .post.post-subfeature ul.tags li.tag.tag-date {
