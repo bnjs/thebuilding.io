@@ -37,7 +37,7 @@ title: The Building
 <div class="clearfix"></div>
 <hr>
 
-{% for post in site.posts offset:3 %}
+{% for post in site.posts offset:7 %}
   {% if post.status != 'feature' %}
     <div class="post post-list">
       {% include posts/title.html index="true" %}
