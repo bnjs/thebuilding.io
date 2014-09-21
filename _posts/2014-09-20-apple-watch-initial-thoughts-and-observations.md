@@ -1,7 +1,6 @@
 ---
 layout: "post"
 title: "Apple Watch: Initial Thoughts and Observations"
-status: feature
 tags: [business, apple, smartwatch]
 original: "http://daringfireball.net/2014/09/apple_watch"
 image: "images/2014-09-20-apple-watch-initial-thoughts-and-observations/HeroSlide-SignatureTouch.ashx"
