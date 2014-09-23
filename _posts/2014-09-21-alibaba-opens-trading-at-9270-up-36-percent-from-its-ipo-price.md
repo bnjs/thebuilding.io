@@ -1,7 +1,6 @@
 ---
 layout: "post"
 title: "Alibaba Opens Trading At $92.70, Up 36 Percent From Its IPO Price"
-status: "feature"
 tags: [business, ipo, alibaba]
 original: "http://techcrunch.com/2014/09/19/alibaba-nyse-opening/"
 image: "images/2014-09-21-alibaba-opens-trading-at-9270-up-36-percent-from-its-ipo-price/6f9a9561.jpg?w=1344"
