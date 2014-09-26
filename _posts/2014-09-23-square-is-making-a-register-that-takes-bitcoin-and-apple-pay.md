@@ -1,7 +1,6 @@
 ---
 layout: "post"
 title: "Square Is Making a Register That Takes Bitcoin and Apple Pay"
-status: 'feature'
 tags: [business, payments, bitcoin, applepay]
 original: "http://www.wired.com/2014/09/square-bitcoin/"
 image: "images/2014-09-23-square-is-making-a-register-that-takes-bitcoin-and-apple-pay/20130528-BITCOIN-MERCATO-035edit.jpg"
